@@ -1,0 +1,33 @@
+name: Auto Add App
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  add-app:
+    if: contains(github.event.issue.title, 'アプリ追加')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Update apps.json
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: node scripts/add-app.js
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add apps.json
+          git diff --quiet --cached || (
+            git commit -m "Add app from Issue #${{ github.event.issue.number }}" &&
+            git push
+          )

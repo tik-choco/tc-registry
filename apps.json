@@ -1,0 +1,16 @@
+[
+  {
+    "id": "b921622b-0405-497e-a05b-5d139c01e365",
+    "url": "https://example.com",
+    "title": "Test",
+    "hostname": "example.com",
+    "addedAt": 1773814978856
+  },
+  {
+    "id": "10b17343-e735-44e8-91c5-5baae33d71b8",
+    "url": "https://example.com",
+    "title": "MyApp",
+    "hostname": "example.com",
+    "addedAt": 1773815145700
+  }
+]
