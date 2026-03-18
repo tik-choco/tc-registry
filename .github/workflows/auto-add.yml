@@ -1,4 +1,4 @@
-name: Auto Add App
+name: Auto Add App PR
 
 on:
   issues:
@@ -10,14 +10,23 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
       issues: write
+
+    env:
+      BRANCH_NAME: chore/add-app-${{ github.event.issue.number }}
+      PR_TITLE: Add app from Issue #${{ github.event.issue.number }}
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Create branch
+        run: git checkout -b "${{ env.BRANCH_NAME }}"
       - name: Update apps.json
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
@@ -28,6 +37,29 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add apps.json
           git diff --quiet --cached || (
-            git commit -m "Add app from Issue #${{ github.event.issue.number }}" &&
-            git push
+            git commit -m "${{ env.PR_TITLE }}" &&
+            git push --set-upstream origin "${{ env.BRANCH_NAME }}"
           )
+      - name: Create Pull Request
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const branch = process.env.BRANCH_NAME;
+            const title = process.env.PR_TITLE;
+
+            try {
+              await github.rest.pulls.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                head: branch,
+                base: 'main',
+                body: `Closes #${context.payload.issue.number}`,
+              });
+            } catch (error) {
+              if (error.status === 422) {
+                core.info('Pull request already exists.');
+                return;
+              }
+              throw error;
+            }

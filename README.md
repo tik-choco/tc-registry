@@ -7,7 +7,7 @@
 2. **「アプリ追加申請」** テンプレートを選択
 3. `アプリ名` / `URL` を入力して Issue を作成
 
-> Issue が作成されると GitHub Actions が自動で `apps.json` に追記します。
+> Issue が作成されると GitHub Actions が PR を作成します。承認してからマージしてください。
 
 ## データ構造
 - `id` (UUID v4)
