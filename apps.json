@@ -12,5 +12,12 @@
     "title": "MyApp",
     "hostname": "example.com",
     "addedAt": 1773815145700
+  },
+  {
+    "id": "9fbfa7ce-d550-472d-96e4-f0c0692f1473",
+    "url": "https://tik-choco.github.io/tc-website/",
+    "title": "零界オンライン",
+    "hostname": "tik-choco.github.io",
+    "addedAt": 1773816388520
   }
 ]
