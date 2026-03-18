@@ -15,7 +15,6 @@ jobs:
 
     env:
       BRANCH_NAME: chore/add-app-${{ github.event.issue.number }}
-      PR_TITLE: Add app from Issue #${{ github.event.issue.number }}
 
     steps:
       - uses: actions/checkout@v4
@@ -37,7 +36,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add apps.json
           git diff --quiet --cached || (
-            git commit -m "${{ env.PR_TITLE }}" &&
+            git commit -m "Add app from Issue #${{ github.event.issue.number }}" &&
             git push --set-upstream origin "${{ env.BRANCH_NAME }}"
           )
       - name: Create Pull Request
@@ -45,7 +44,28 @@ jobs:
         with:
           script: |
             const branch = process.env.BRANCH_NAME;
-            const title = process.env.PR_TITLE;
+            const body = context.payload.issue.body || '';
+
+            function extractField(text, label) {
+              const lines = text.replace(/\r\n/g, '\n').split('\n');
+
+              for (let i = 0; i < lines.length; i += 1) {
+                const trimmed = lines[i].trim();
+                if (!trimmed) continue;
+
+                if (trimmed === `### ${label}` || trimmed === `## ${label}` || trimmed === `${label}:`) {
+                  for (let j = i + 1; j < lines.length; j += 1) {
+                    const next = lines[j].trim();
+                    if (next) return next;
+                  }
+                }
+              }
+
+              return null;
+            }
+
+            const appName = extractField(body, 'App name');
+            const title = appName ? `Add ${appName}` : `Add app from Issue #${context.payload.issue.number}`;
 
             try {
               await github.rest.pulls.create({
