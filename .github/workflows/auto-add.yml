@@ -2,11 +2,13 @@ name: Auto Add App PR
 
 on:
   issues:
-    types: [opened]
+    types: [opened, labeled]
 
 jobs:
   add-app:
-    if: contains(github.event.issue.labels.*.name, 'app-add')
+    if: >-
+      ${{ (github.event.action == 'opened' && contains(github.event.issue.labels.*.name, 'app-add'))
+      || (github.event.action == 'labeled' && github.event.label.name == 'app-add') }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
