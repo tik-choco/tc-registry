@@ -1,5 +1,8 @@
 name: "アプリ追加申請"
 description: "新しいWebアプリをレジストリに追加します"
+title: "アプリ追加: "
+labels:
+  - app-add
 
 body:
   - type: markdown
