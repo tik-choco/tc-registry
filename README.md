@@ -3,7 +3,7 @@
 シンプルな JSON ベースの登録所です。
 
 ## 追加方法
-1. GitHub で「New issue」を開く
+1. [Issues](https://github.com/tik-choco/tc-registry/issues)を開く
 2. **「アプリ追加申請」** テンプレートを選択
 3. `アプリ名` / `URL` を入力して Issue を作成
 
