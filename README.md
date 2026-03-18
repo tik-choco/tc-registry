@@ -1,20 +1,21 @@
 # tc-registry
 
-シンプルな JSON ベースの登録所です。
+Simple JSON-based registry.
 
-## 追加方法
-1. [Issues](https://github.com/tik-choco/tc-registry/issues)を開く
-2. **「アプリ追加申請」** テンプレートを選択
-3. `アプリ名` / `URL` を入力して Issue を作成
+## Add an app
+1. Open [Issues](https://github.com/tik-choco/tc-registry/issues)
+2. Choose the **App Add Request** template
+3. Fill in `App name` and `URL`, then create the issue
 
-> Issue が作成されると GitHub Actions が PR を作成します。
+> GitHub Actions creates a pull request automatically.
+> The automation runs for issues that start with `Add app:`.
 
-## データ構造
+## Data structure
 - `id` (UUID v4)
 - `url`
 - `title`
-- `hostname` (URL から自動生成)
-- `addedAt` (Unix epoch ミリ秒)
+- `hostname` (derived from the URL)
+- `addedAt` (Unix epoch milliseconds)
 
-## Raw データ
+## Raw data
 - `https://raw.githubusercontent.com/tik-choco/tc-registry/main/apps.json`

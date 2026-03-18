@@ -1,24 +1,22 @@
-name: "アプリ追加申請"
-description: "新しいWebアプリをレジストリに追加します"
-title: "アプリ追加: "
-labels:
-  - app-add
+name: "App Add Request"
+description: "Add a new web app to the registry"
+title: "Add app: "
 
 body:
   - type: markdown
     attributes:
-      value: "以下のフォームに入力すると、自動的に `apps.json` が更新されます。"
+      value: "Fill out the form below and `apps.json` will be updated automatically."
   - type: input
     id: title
     attributes:
-      label: "アプリ名"
-      description: "例: Awesome App"
+      label: "App name"
+      description: "Example: Awesome App"
     validations:
       required: true
   - type: input
     id: url
     attributes:
       label: "URL"
-      description: "例: https://example.com"
+      description: "Example: https://example.com"
     validations:
       required: true

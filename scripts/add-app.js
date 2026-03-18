@@ -7,7 +7,7 @@ const crypto = require('crypto');
 const dbPath = path.join(__dirname, '..', 'apps.json');
 
 /**
- * Issue本文から項目を抜き取る（GitHub Issue テンプレートを前提とした簡易実装）
+ * Extract a field from the issue body (simple parser for the issue template).
  */
 function extractField(body, label) {
   const lines = body.replace(/\r\n/g, '\n').split('\n');
@@ -15,7 +15,7 @@ function extractField(body, label) {
     const trimmed = lines[i].trim();
     if (!trimmed) continue;
 
-    // "### アプリ名" などのラベル行に続く行を取得
+    // Grab the first non-empty line after matching labels such as "### App name".
     if (
       trimmed === label ||
       trimmed === `### ${label}` ||
@@ -35,7 +35,7 @@ const issueBody = process.env.ISSUE_BODY || '';
 let [title, url] = process.argv.slice(2);
 
 if ((!title || !url) && issueBody) {
-  title = title || extractField(issueBody, 'アプリ名');
+  title = title || extractField(issueBody, 'App name');
   url = url || extractField(issueBody, 'URL');
 }
 
