@@ -1,4 +1,4 @@
-[  
+[
   {
     "id": "9fbfa7ce-d550-472d-96e4-f0c0692f1473",
     "url": "https://tik-choco.github.io/tc-website/",
@@ -12,5 +12,12 @@
     "title": "MistLib",
     "hostname": "github.com",
     "addedAt": 1773816560180
+  },
+  {
+    "id": "5b01d0fc-f5ad-4bc5-b27d-25f1aebd2842",
+    "url": "https://tik-choco.github.io/tc-pdf-viewer/",
+    "title": "PDF Viewer",
+    "hostname": "tik-choco.github.io",
+    "addedAt": 1774090503479
   }
 ]
