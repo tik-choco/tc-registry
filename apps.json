@@ -26,5 +26,12 @@
     "title": "魔法使いユーナ",
     "hostname": "booth.pm",
     "addedAt": 1774168730031
+  },
+  {
+    "id": "d3c88c4e-8fe0-489c-96c7-be0142b5f076",
+    "url": "https://tik-choco.github.io/tc-storage/",
+    "title": "tc-storage",
+    "hostname": "tik-choco.github.io",
+    "addedAt": 1779256469019
   }
 ]
