@@ -33,5 +33,12 @@
     "title": "tc-storage",
     "hostname": "tik-choco.github.io",
     "addedAt": 1779256469019
+  },
+  {
+    "id": "6bee785d-41d6-4627-ba12-4c428516e86a",
+    "url": "https://tik-choco.github.io/tc-note/",
+    "title": "tc-note",
+    "hostname": "tik-choco.github.io",
+    "addedAt": 1782997398817
   }
 ]
