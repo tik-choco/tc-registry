@@ -47,5 +47,12 @@
     "title": "tc-translate",
     "hostname": "tik-choco.github.io",
     "addedAt": 1783307142316
+  },
+  {
+    "id": "34f31910-5f64-42e2-9305-c5a23f177e4a",
+    "url": "https://tik-choco.github.io/tc-chat/",
+    "title": "tc-chat",
+    "hostname": "tik-choco.github.io",
+    "addedAt": 1783324922072
   }
 ]
