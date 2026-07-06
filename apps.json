@@ -40,5 +40,12 @@
     "title": "tc-note",
     "hostname": "tik-choco.github.io",
     "addedAt": 1782997398817
+  },
+  {
+    "id": "edb04217-fa7b-4734-b234-f0bda0ce5cad",
+    "url": "https://tik-choco.github.io/tc-translate/",
+    "title": "tc-translate",
+    "hostname": "tik-choco.github.io",
+    "addedAt": 1783307142316
   }
 ]
