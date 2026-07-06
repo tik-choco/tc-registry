@@ -47,5 +47,12 @@
     "title": "tc-translate",
     "hostname": "tik-choco.github.io",
     "addedAt": 1783307142316
+  },
+  {
+    "id": "9dabe1fd-77bd-4e3a-9f8e-2632c88bc328",
+    "url": "https://tik-choco.github.io/tc-vrm-viewer/",
+    "title": "tc-vrm-viewer",
+    "hostname": "tik-choco.github.io",
+    "addedAt": 1783325009619
   }
 ]
