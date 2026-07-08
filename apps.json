@@ -75,5 +75,12 @@
     "title": "TC Space",
     "hostname": "tik-choco.github.io",
     "addedAt": 1783339140240
+  },
+  {
+    "id": "9426e017-7f2c-432e-b744-1bc48a75487f",
+    "url": "https://tik-choco.github.io/tc-town/",
+    "title": "TC Town",
+    "hostname": "tik-choco.github.io",
+    "addedAt": 1783473449635
   }
 ]
