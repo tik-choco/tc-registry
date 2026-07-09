@@ -82,5 +82,12 @@
     "title": "TC Town",
     "hostname": "tik-choco.github.io",
     "addedAt": 1783473449635
+  },
+  {
+    "id": "237c0636-bb0b-409a-9b4a-31ec319f18df",
+    "url": "https://tik-choco.github.io/tc-news/",
+    "title": "TC News",
+    "hostname": "tik-choco.github.io",
+    "addedAt": 1783577397991
   }
 ]
