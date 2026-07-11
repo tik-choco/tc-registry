@@ -89,5 +89,12 @@
     "title": "TC News",
     "hostname": "tik-choco.github.io",
     "addedAt": 1783577397991
+  },
+  {
+    "id": "415ee635-8d44-44d7-a492-2b5523a28ac4",
+    "url": "https://tik-choco.github.io/tc-books/",
+    "title": "TC Books",
+    "hostname": "tik-choco.github.io",
+    "addedAt": 1783743245944
   }
 ]
