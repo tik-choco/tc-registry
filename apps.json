@@ -103,5 +103,12 @@
     "title": "TC Presenter",
     "hostname": "tik-choco.github.io",
     "addedAt": 1784157821865
+  },
+  {
+    "id": "3a2726a5-ad55-42f9-a10b-bd43c2a46305",
+    "url": "https://tik-choco.github.io/tc-lingo/",
+    "title": "TC Lingo",
+    "hostname": "tik-choco.github.io",
+    "addedAt": 1784189718147
   }
 ]
