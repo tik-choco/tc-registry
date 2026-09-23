@@ -110,5 +110,12 @@
     "title": "TC Lingo",
     "hostname": "tik-choco.github.io",
     "addedAt": 1784189718147
+  },
+  {
+    "id": "b08f12d7-715b-4518-8099-09ede0957e22",
+    "url": "https://tik-choco.github.io/tc-papers/",
+    "title": "TC Papers",
+    "hostname": "tik-choco.github.io",
+    "addedAt": 1790130890831
   }
 ]
